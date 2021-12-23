@@ -32,3 +32,30 @@ const returnArr = function (arr, n) {
 
 }
 returnArr(arr, 3)
+
+
+
+//Write a JavaScript function to get the last element of an array. 
+//Passing a parameter 'n' will return the last 'n' elements of the array.
+//in questo esercizio bisogna usare splice come sopra, però invece che dare 2 parametri a slice() basta mettere
+//il valore negativo al parametro n, il quale andrà a prendere gli ultimi n elementi di un array.
+const returnArr1 = function (arr, n) {
+    n === null ? console.log(arr) :
+        console.log(arr.slice(-n))
+
+}
+returnArr1(arr, 8)
+
+
+//Write a simple JavaScript program to join all elements of the following array into a string.
+//per questo esercizio basta usare la funzione toString, la quale accetta un array come parametro e lo
+//trasforma in stringa
+
+myColor = ["Red", "Green", "White", "Black"]
+const joinArray = function (array) {
+    console.log(array.toString())
+
+}
+
+joinArray(myColor)
+joinArray(arr)
