@@ -78,3 +78,12 @@ function insertHyphen(str) {
 }
 console.log(insertHyphen(112233445566))
 
+
+
+//Write a JavaScript program to sort the items of an array.
+//basta usare il metodo sort()
+
+let arr1 = [3, 18, 7, 26, -5, -4, 33, 2, 71]
+
+
+console.log(arr1.sort())
