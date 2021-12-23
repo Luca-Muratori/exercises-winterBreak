@@ -59,3 +59,22 @@ const joinArray = function (array) {
 
 joinArray(myColor)
 joinArray(arr)
+
+
+//6. Write a JavaScript program which accept a number as input and insert dashes (-)
+//between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
+//prima dobbiamo dividere la stringa(1), poi cerchiamo se ci sono numeri (2), e infine creiamo un if statements
+//dove cerchiamo solo numeri pari e nel mezzo ci mettiamo un - con splice (3), e ritorniamo la stringa riunita (4)
+function insertHyphen(str) {
+    const strNum = str.toString()//dato che non tutti i numeri possono essere in una stringa, prima la trsformiamo in tale
+    var strArr = strNum.split('');//(1)
+    var numArr = strArr.map(Number); //(2)
+    for (var i = 0; i < numArr.length; i++) { //(3)
+        if (numArr[i - 1] % 2 === 0 && numArr[i] % 2 === 0) {
+            numArr.splice(i, 0, '-');
+        }
+    }
+    return numArr.join('');//(4)
+}
+console.log(insertHyphen(112233445566))
+
