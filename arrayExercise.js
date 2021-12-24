@@ -87,3 +87,53 @@ let arr1 = [3, 18, 7, 26, -5, -4, 33, 2, 71]
 
 
 console.log(arr1.sort())
+
+
+//8. Write a JavaScript program to find the most frequent item of an array.
+//non ho capito perchè
+const arr8 = [3, 'a', 'a', '2', 2, 3, '2', 3, '2', 2, 4, 9, 3];
+let mf = 1;
+let m = 0;
+let item;
+for (let i = 0; i < arr8.length; i++) {
+    for (let j = i; j < arr8.length; j++) {
+        if (arr8[i] == arr8[j])
+            m++;
+        if (mf < m) {
+            mf = m;
+            item = arr8[i];
+        }
+    }
+    m = 0;
+}
+console.log(`${item} ( ${mf} times ) `);
+
+
+//9.Write a JavaScript program which accept a string as input and swap the case of each character.
+// For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
+//ho creato un'array vuoto e poi una funzione che prima dividi ogni lettera della stringa e con un for loop ho fatto
+//in modo che trasformasse ogni carattere nel suo opposto, per poi riunire l'array in una stringa
+//n.b. in caso di caratteri speciali, la funzione li considera sia minuscoli che maiuscoli, riportandoli 2 volte
+
+let stringCase = 'hELLO MY NAME IS mORRIS!'
+let result = []
+
+const reverseCase = function (str) {
+    let strSplit = str.split('')
+    for (let i = 0; i < strSplit.length; i++) {
+        const element = strSplit[i];
+
+
+        if (element === element.toUpperCase()) {
+            result.push(element.toLowerCase())
+        } if (element === element.toLowerCase()) {
+            result.push(element.toUpperCase())
+
+        }
+
+
+    }
+    return result.join('')
+}
+
+console.log(reverseCase(stringCase))
