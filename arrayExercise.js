@@ -115,7 +115,7 @@ console.log(`${item} ( ${mf} times ) `);
 //in modo che trasformasse ogni carattere nel suo opposto, per poi riunire l'array in una stringa
 //n.b. in caso di caratteri speciali, la funzione li considera sia minuscoli che maiuscoli, riportandoli 2 volte
 
-let stringCase = 'hELLO MY NAME IS mORRIS!'
+let stringCase = 'hELLO MY NAME IS mORRIS'
 let result = []
 
 const reverseCase = function (str) {
@@ -137,3 +137,16 @@ const reverseCase = function (str) {
 }
 
 console.log(reverseCase(stringCase))
+
+
+//10. Write a JavaScript program which prints the elements of the following array.
+//per risolverlo ho usato un semplice for loop, dove riporto semplicemente l'indice dell'array
+//e i valori presenti in quell'indice (arr[i])
+
+let a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]
+
+const printsArr = function (arr) {
+    for (i = 0; i < arr.length; i++)
+        console.log("The array in the index " + i + " have: " + arr[i]);
+}
+printsArr(a)
