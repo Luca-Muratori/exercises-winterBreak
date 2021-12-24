@@ -150,3 +150,21 @@ const printsArr = function (arr) {
         console.log("The array in the index " + i + " have: " + arr[i]);
 }
 printsArr(a)
+
+
+//11. Write a JavaScript program to find the sum of squares of a numeric vector.
+//in pratica devo creare un programma per trovare la somma dei quadrati di un
+// //array di numeri
+// l'ho risolto copianod e incollando dal sito, senza capirci niente
+
+
+function sum_sq(array) {
+    var sum = 0,
+        i = array.length;
+    while (i--) {
+        sum += Math.pow(array[i], 2);
+    } return sum;
+}
+
+console.log(sum_sq(arr1))
+
