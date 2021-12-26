@@ -188,4 +188,19 @@ sumAndCompute([2, 4])
 
 
 //13. Write a JavaScript program to add items in an blank array and display the items.
+//ho usato semplicemente un .push per 
+
+let array13 = []
+const addElement = function (element) {
+
+    array13.push(element)
+    console.log(`array13=[${array13}]`)
+}
+
+addElement(1)
+addElement(2)
+addElement('salmon')
+
+//
+//
 //
