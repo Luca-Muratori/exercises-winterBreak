@@ -201,6 +201,13 @@ addElement(1)
 addElement(2)
 addElement('salmon')
 
+//14.Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+//ho creato una variabile che contiene la funzione Set, che crea una lista che accoglie gli elementi
+//presenti nell'array iniziale, dove ogni valore è presente solo una volta 
 //
-//
-//
+let salmone = 'salmone'
+let arr14 = [1, 1, 3, 4, 5, 6, 1, 2, 3, 3, 'salmone', salmone]
+
+let uniqueChars = [...new Set(arr14)];
+
+console.log(uniqueChars);
