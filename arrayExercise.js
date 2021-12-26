@@ -155,7 +155,8 @@ printsArr(a)
 //11. Write a JavaScript program to find the sum of squares of a numeric vector.
 //in pratica devo creare un programma per trovare la somma dei quadrati di un
 // //array di numeri
-// l'ho risolto copianod e incollando dal sito, senza capirci niente
+// l'ho risolto copianod e incollando dal sito, in pratica grazie a i-- parte dalla fine e
+//con il comando sum += inserisce al'interno di sum tutte le somme
 
 
 function sum_sq(array) {
@@ -168,3 +169,23 @@ function sum_sq(array) {
 
 console.log(sum_sq(arr1))
 
+
+//12. Write a JavaScript program to compute the sum and product of an array of integers.
+//ho usato lo stesso metodo dell'esercizio precendente
+
+const sumAndCompute = function (array) {
+    let compute = 1
+    let sum = 0,
+        i = array.length;
+    while (i--) {
+        sum += array[i]
+        compute = compute * array[i]
+    } return console.log(`The sum of the array is ${sum} and the product of every number is ${compute}`)
+}
+
+sumAndCompute(arr1)
+sumAndCompute([2, 4])
+
+
+//13. Write a JavaScript program to add items in an blank array and display the items.
+//
