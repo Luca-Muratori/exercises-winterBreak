@@ -211,3 +211,60 @@ let arr14 = [1, 1, 3, 4, 5, 6, 1, 2, 3, 3, 'salmone', salmone]
 let uniqueChars = [...new Set(arr14)];
 
 console.log(uniqueChars);
+
+
+
+// 16. Write a JavaScript program to find the leap years (anni bisestili) in a given range of years.
+// A year is a leap year if the following conditions are satisfied:
+// 1-The year is a multiple of 400.
+// 2-The year is a multiple of 4 and not a multiple of 100.
+const leapYears = function (year) {
+    if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+        console.log(`${year} is leap`)
+    } else {
+        console.log(`${year} isn't leap`)
+    }
+}
+leapYears(1999)
+leapYears(2000)
+leapYears(2001)
+leapYears(2002)
+
+
+//17. Write a JavaScript program to shuffle an array.
+let arr17 = [1, 'salmon', 3, 'troope']
+const shuffledArray = arr17.sort((a, b) => 0.5 - Math.random());
+console.log(shuffledArray)
+
+
+
+
+// 18. Write a JavaScript program to perform a binary search.
+// https://medium.com/@jeffrey.allen.lewis/javascript-algorithms-explained-binary-search-25064b896470
+//work only in sorted array
+const binarySearch = (array, target) => {
+    let startIndex = 0;
+    let endIndex = array.length - 1;
+    while (startIndex <= endIndex) {
+        let middleIndex = Math.floor((startIndex + endIndex) / 2);
+        if (target === array[middleIndex]) {
+            return console.log("Target was found at index " + middleIndex);
+        }
+        if (target > array[middleIndex]) {
+            console.log("Searching the right side of Array")
+            startIndex = middleIndex + 1;
+        }
+        if (target < array[middleIndex]) {
+            console.log("Searching the left side of array")
+            endIndex = middleIndex - 1;
+        }
+        else {
+            console.log("Not Found this loop iteration. Looping another iteration.")
+        }
+    }
+
+    console.log("Target value not found in array");
+}
+let exampleArray = [1, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59]
+
+binarySearch(exampleArray, 100)
