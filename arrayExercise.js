@@ -268,3 +268,16 @@ const binarySearch = (array, target) => {
 let exampleArray = [1, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59]
 
 binarySearch(exampleArray, 100)
+
+
+// 19. There are two arrays with individual values, write a JavaScript program to compute the
+// sum of each individual index value from the given arrays.
+
+let array19a = [1, 0, 2, 3, 4];
+let array19b = [3, 5, 6, 7, 8];
+
+var sum = array19a.map(function (num, idx) {
+    return num + array19b[idx];
+});
+
+console.log(sum)
